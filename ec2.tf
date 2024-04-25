@@ -16,8 +16,8 @@ resource "aws_subnet" "aws-deployment-subnet" {
 }
 
 resource "aws_network_interface" "aws-deployment-ni" {
-  subnet_id     = aws_vpc.aws-deployment-subnet.id
-  private_ips   = ["172.16.10.100"]
+  subnet_id   = aws_vpc.aws-deployment-subnet.id
+  private_ips = ["172.16.10.100"]
 
   tags = {
     name = "demo-ni"
@@ -25,8 +25,8 @@ resource "aws_network_interface" "aws-deployment-ni" {
 }
 
 resource "aws_security_group" "aws-deployment-sg" {
-  name          = "demo-sg"
-  vpc_id        = aws_vpc.aws-deployment-vpc.id
+  name   = "demo-sg"
+  vpc_id = aws_vpc.aws-deployment-vpc.id
   ingress {
     from_port   = 8080
     to_port     = 8080
