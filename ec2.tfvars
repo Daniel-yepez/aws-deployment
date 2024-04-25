@@ -44,4 +44,3 @@ resource "aws_instance" "aws-deployment-ec2" {
     device_index         = 0
   }
 }
-#
