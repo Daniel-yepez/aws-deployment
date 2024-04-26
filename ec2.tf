@@ -24,3 +24,4 @@ resource "aws_instance" "aws-deployment-ec2" {
     Name = "demo-ec2"
   }
 }
+#
