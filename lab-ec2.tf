@@ -11,7 +11,7 @@ resource "aws_subnet" "aws-deployment-subnet-lab" {
   cidr_block = "172.17.20.0/24"
 
   tags = {
-    Name = "demo-subnet-lab-2"
+    Name = "demo-subnet-lab"
   }
 }
 
