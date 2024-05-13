@@ -1,4 +1,4 @@
-resource "aws_vpc" "aws-deployment-vpc-lab" {
+resource "aws_vpc" "new-vpc" {
   cidr_block = "172.18.0.0/16"
 
   tags = {
@@ -6,8 +6,8 @@ resource "aws_vpc" "aws-deployment-vpc-lab" {
   }
 }
 
-resource "aws_subnet" "aws-deployment-subnet-lab" {
-  vpc_id     = aws_vpc.aws-deployment-vpc-lab.id
+resource "aws_subnet" "new-subnet" {
+  vpc_id     = aws_vpc.new-vpc.id
   cidr_block = "172.18.20.0/24"
 
   tags = {
@@ -15,9 +15,9 @@ resource "aws_subnet" "aws-deployment-subnet-lab" {
   }
 }
 
-resource "aws_instance" "aws-deployment-ec2-lab" {
+resource "aws_instance" "new-ec2" {
   ami             = "ami-0be2609ba883822ec"
-  subnet_id       = aws_subnet.aws-deployment-subnet-lab.id
+  subnet_id       = aws_subnet.new-subnet.id
   instance_type   = "t2.micro"
 
   tags = {
