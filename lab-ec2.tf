@@ -24,4 +24,3 @@ resource "aws_instance" "aws-deployment-ec2-lab" {
     Name = "lab-new-ec2"
   }
 }
-#
